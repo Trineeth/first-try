@@ -1,6 +1,6 @@
-bob1 = 91
-bob2 = 60
-bob3 = 79
+# bob1 = 91
+# bob2 = 60
+# bob3 = 79
 # bob4 = 96
 # bob5 = 68
 # sum = bob1+bob2+bob3+bob4+bob5
@@ -28,7 +28,4 @@ if (math > 100 or english > 100 or science > 100 or history > 100):
 else  :
     sum = math+science+history+english
     average = sum//4
-
-
-
     print ("your average grade was " , average ,"%")
