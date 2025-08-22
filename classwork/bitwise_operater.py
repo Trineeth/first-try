@@ -26,3 +26,5 @@ tot = history+science+english+math+reading
 av = tot/5
 if (av >= 91 and av <= 100):
     print ("your average is A" )
+    if (av >= 81 and av <= 91):
+        print ("your average is A2" )
