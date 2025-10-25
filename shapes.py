@@ -1,13 +1,13 @@
-import turtle
-turtle.Screen().bgcolor("orange")
-turtle.Screen().setup(300,400)
-polygon = turtle.Turtle()
-sides = 6
-length = 70
-angle  = 360.0 / sides
-for i in range(sides):
-    polygon.forward(length)
-    polygon.right(angle)
+'import turtle
+# turtle.Screen().bgcolor("orange")
+# turtle.Screen().setup(300,400)
+# polygon = turtle.Turtle()
+# sides = 6
+# length = 70
+# angle  = 360.0 / sides
+# for i in range(sides):
+#     polygon.forward(length)
+#     polygon.right(angle)
 
 
 # turtle.done()
@@ -36,12 +36,12 @@ for i in range(sides):
 # wn = turtle.Screen()
 # wn.bgcolor("light blue")
 # wn.title("turtle")
-# pen = turtle.Turtle()
+# pen = turtle.Turtle(')
 
-# size = 0
-# while   True:
-#     for i in range(4):
-#         pen.fd(size + 1)
-#         pen.left(90)
-#         size = size + 5
-#     size = size + 1
+size = 0
+while   True:
+    for i in range(4):
+        pen.fd(size + 1)
+        pen.left(90)
+        size = size + 5
+    size = size + 1
