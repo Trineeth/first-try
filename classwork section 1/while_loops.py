@@ -25,3 +25,21 @@
 #     print(num, "is an armstrong number")
 # else:
 #     print (num, "is not an armstrong number")
+bob = True
+while bob:
+    print("RUN AWAY")
+    bob = False
+    if bob == False:
+        print("RUN AWAY")
+        bob = True
+        if bob == True:
+            print("U READ THIS SOME HOW")
+            while bob:
+                print("RUN AWAY")
+                bob = False
+                if bob == False:
+                    print("RUN AWAY")
+                    bob = True
+
+            
+

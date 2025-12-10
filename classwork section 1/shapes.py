@@ -1,4 +1,4 @@
-'import turtle
+import turtle
 # turtle.Screen().bgcolor("orange")
 # turtle.Screen().setup(300,400)
 # polygon = turtle.Turtle()
@@ -27,16 +27,6 @@
 # board.pendown()
 # board.right(90)
 # board.forward(100)
-
-# board.right(120)
-# board.forward(100)
-# board.right(120)
-# board.forward(100)
-# turtle.done()
-# wn = turtle.Screen()
-# wn.bgcolor("light blue")
-# wn.title("turtle")
-# pen = turtle.Turtle(')
 
 size = 0
 while   True:
