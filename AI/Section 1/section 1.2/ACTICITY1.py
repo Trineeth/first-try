@@ -1,4 +1,6 @@
-file = open('C:/Users/trine/OneDrive/Documents/python class/AI/Section 2/tetx.txt')
+import os
 
-print(file.read())
-file.close()
+file_path = os.path.join(os.path.dirname(__file__), 'tetx.txt')
+
+with open(file_path) as file:
+    print(file.read())

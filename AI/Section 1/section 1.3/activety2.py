@@ -1,17 +1,22 @@
-idea = int(input())
-file = open('C:/Users/trine/OneDrive/Documents/python class/AI/Section 1/section 1.3/textt.txt', 'r')
-print(file.read())
-file.close()
+import os
 
-file = open('C:/Users/trine/OneDrive/Documents/python class/AI/Section 1/section 1.3/textt.txt', 'r')
-print("\n Read in parts\n")
-print(file.read(idea))
-file.close()
+file_path = os.path.join(os.path.dirname(__file__), 'textt.txt')
 
-file = open('C:/Users/trine/OneDrive/Documents/python class/AI/Section 1/section 1.3/textt.txt', 'w')
-file.write(" Hi! I am Tingu and 11 years old")
-file.close()
+try:
+    idea = int(input())
+except ValueError:
+    print("Please enter a valid number.")
+    exit()
 
-file = open('C:/Users/trine/OneDrive/Documents/python class/AI/Section 1/section 1.3/textt.txt', 'a')
-file.write(" Hi! I am Tingu and 11 years old")
-file.close()
+with open(file_path, 'r') as file:
+    print(file.read())
+
+with open(file_path, 'r') as file:
+    print("\n Read in parts\n")
+    print(file.read(idea))
+
+with open(file_path, 'w') as file:
+    file.write(" Hi! I am a student and learning Python")
+
+with open(file_path, 'a') as file:
+    file.write(" Hi! I am a student and learning Python")

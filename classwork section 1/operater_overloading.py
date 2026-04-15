@@ -34,7 +34,11 @@ while (True):
     meaning = input("enter in the meaning of the word: ")
 
     flash.append(flashcard(word, meaning))
-    option = int(input("enter 0 for another flashcard, otherwise enter 1: "))
+    try:
+        option = int(input("enter 0 for another flashcard, otherwise enter 1: "))
+    except ValueError:
+        print("Please enter 0 or 1.")
+        break
     if(option):
         break
 

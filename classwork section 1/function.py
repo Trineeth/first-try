@@ -24,9 +24,13 @@ print("1. add")
 print("2. subtract")
 print("3. multiply")
 print("4. divide")
-choice = int(input("enter in one of the choices: "))
-num1 = int(input("enter in your number: "))
-num2 = int(input("enter in your second number: "))
+try:
+    choice = int(input("enter in one of the choices: "))
+    num1 = int(input("enter in your number: "))
+    num2 = int(input("enter in your second number: "))
+except ValueError:
+    print("Please enter valid numbers.")
+    exit()
 rest = 0
 if choice == 1:
     print(add(num1, num2))

@@ -14,8 +14,12 @@
 #     print ("either the number is greater than 0")
 # else:
 #     print ("no number is greater than 0")
-hieght = float(input("what is your hieght in cm: "))
-weight = float(input("what is your wieght in kg: "))
+try:
+    hieght = float(input("what is your hieght in cm: "))
+    weight = float(input("what is your wieght in kg: "))
+except ValueError:
+    print("Please enter valid numbers.")
+    exit()
 bmi = weight / (hieght / 100)**2
 if bmi <= 18.4:
     print ("you are underweight")

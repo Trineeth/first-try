@@ -45,7 +45,11 @@
 # print("number of fizzes is ", c)
 # print("number of buzzes is ", d)
 # print("number of dings is ", e)      
-f = int(input("enter in a number: "))
+try:
+    f = int(input("enter in a number: "))
+except ValueError:
+    print("Please enter a valid number.")
+    exit()
 var = f
 while var > 0:
     var = var - 0.1

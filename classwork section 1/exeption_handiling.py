@@ -4,7 +4,7 @@
 # except ValueError as ex:
 #     print("exeption ", ex)
 # try:
-#     num1, num2 = eval(input("enter in a number, seperated by a comma: "))
+#     num1, num2 = [int(x.strip()) for x in input("enter in a number, seperated by a comma: ").split(",")]
 #     result = num1 / num2
 #     print("the result is ", result)
 # except ZeroDivisionError:

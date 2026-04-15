@@ -1,5 +1,8 @@
+import os
 import tkinter as tk
 from  tkinter import ttk, messagebox
+
+ASSET_DIR = os.path.dirname(__file__)
 
 class RestrauntOrderManagment:
     def __init__(self, root):
@@ -65,7 +68,7 @@ class RestrauntOrderManagment:
         bg_width, bg_height = 800, 600
         canvas = tk.Canvas(root, width=bg_width, height=bg_height)
         canvas.pack()
-        original_image = tk.PhotoImage(file="C:\\Users\\trine\\OneDrive\\Documents\\python class\\classwork section 1\\tkkinter\\restruant order\\background.jpg")
+        original_image = tk.PhotoImage(file=os.path.join(ASSET_DIR, "background.jpg"))
         background_image = original_image.subsample(
             original_image.width() // bg_width,
             original_image.height() // bg_height)

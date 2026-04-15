@@ -12,7 +12,11 @@
 # else:
 #     halfDiamRow = int(rowSize/2)+1
 # take input from user
-rowSize = int(input("Enter the number of rows: "))
+try:
+    rowSize = int(input("Enter the number of rows: "))
+except ValueError:
+    print("Please enter a valid number.")
+    exit()
 if rowSize % 2 == 0:  
     halfDiamRow = int(rowSize / 2)
 else:
