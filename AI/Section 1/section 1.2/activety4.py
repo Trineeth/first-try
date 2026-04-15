@@ -1,10 +1,17 @@
-file = open('C:/Users/trine/OneDrive/Documents/python class/AI/Section 2/tetx.txt', 'r')
-counter = 0
+import os
 
-content = file.read()
-Colist = content.split("\n")
+# Build a portable path relative to this script's directory
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE_PATH = os.path.join(SCRIPT_DIR, "tetx.txt")
 
-for i in Colist:
-    if i:
-        counter += 1
-print(counter)
+# --- Count non-empty lines in the file ---
+try:
+    with open(FILE_PATH, "r") as file:
+        content = file.read()
+        lines = content.split("\n")
+        counter = sum(1 for line in lines if line)
+        print(counter)
+except FileNotFoundError:
+    print(f"Error: File not found at {FILE_PATH}")
+except IOError as e:
+    print(f"Error reading file: {e}")
