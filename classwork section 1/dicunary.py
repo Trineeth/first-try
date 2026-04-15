@@ -23,7 +23,11 @@
 # print(result)
 tes = {'codingnal': 2, 'is' :2, 'best' : 2, 'for' : 2, 'coding' : 1}
 print(tes)
-k = int(input("enter in a number: "))
+try:
+    k = int(input("enter in a number: "))
+except ValueError:
+    print("Please enter a valid number.")
+    exit()
 
 res = 0
 for key in tes:

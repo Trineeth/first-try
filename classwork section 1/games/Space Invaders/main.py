@@ -1,6 +1,9 @@
 import math
+import os
 import random
 import pygame
+
+ASSET_DIR = os.path.dirname(__file__)
 
 SCREEN_WIDTH = 800
 SCREEN_Height = 500
@@ -16,15 +19,15 @@ COLLISION_DISTANCE = 27
 pygame.init()
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_Height))
-background = pygame.image.load(r'C:\Users\trine\OneDrive\Documents\python class\games\Space Invaders\Background.png')
+background = pygame.image.load(os.path.join(ASSET_DIR, 'Background.png'))
 pygame.display.set_caption("Space Invader")
-icon = pygame.image.load(r'C:\Users\trine\OneDrive\Documents\python class\games\Space Invaders\UFO.png')
+icon = pygame.image.load(os.path.join(ASSET_DIR, 'UFO.png'))
 pygame.display.set_icon(icon)
-playerImg = pygame.image.load(r'C:\Users\trine\OneDrive\Documents\python class\games\Space Invaders\hero.png')
+playerImg = pygame.image.load(os.path.join(ASSET_DIR, 'hero.png'))
 playerX = PLAYER_START_X
 playerY = PLAYER_START_Y
 playerX_change = 0
-enemyImg = pygame.image.load(r'C:\Users\trine\OneDrive\Documents\python class\games\Space Invaders\alien.png')
+enemyImg = pygame.image.load(os.path.join(ASSET_DIR, 'alien.png'))
 enemyImg = []
 enemyX = []
 enemyY = []
@@ -33,13 +36,13 @@ enemyY_change = []
 num_of_enemies = 6
 
 for _i in  range(num_of_enemies):
-    enemyImg.append(pygame.image.load(r'C:\Users\trine\OneDrive\Documents\python class\games\Space Invaders\alien.png'))
+    enemyImg.append(pygame.image.load(os.path.join(ASSET_DIR, 'alien.png')))
     enemyX.append(random.randint(0, SCREEN_WIDTH - 64))
     enemyY.append(random.randint(ENEMY_START_Y_MIN, ENEMY_START_Y_MAX))
     enemyX_change.append(ENEMY_SPEED_X)
     enemyY_change.append(ENEMY_SPEED_Y)
 
-bulletImg = pygame.image.load(r'C:\Users\trine\OneDrive\Documents\python class\games\Space Invaders\bullet.png')
+bulletImg = pygame.image.load(os.path.join(ASSET_DIR, 'bullet.png'))
 bulletX = 0
 bulletY = PLAYER_START_Y
 bulletX_change = 0

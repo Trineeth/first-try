@@ -31,6 +31,10 @@ class pair_elaments:
                 return(lookup[target-num], i )
             lookup[num] = i
 
-value = int(input("enter sum for you want to make this search: "))
+try:
+    value = int(input("enter sum for you want to make this search: "))
+except ValueError:
+    print("Please enter a valid number.")
+    exit()
 print("index1=%d, index=%d" %
 pair_elaments().twoSum((10,20,30,40,50,60,70),value))

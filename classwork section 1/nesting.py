@@ -18,13 +18,21 @@
 print ("choose your veichle")
 print ("1. bike")
 print ("2. car")
-choice = int(input("what is your awnser:"))
+try:
+    choice = int(input("what is your awnser:"))
+except ValueError:
+    print("Please enter a valid number.")
+    exit()
 
 if (choice == 1):
     print ("do you like")
     print ("1 scooter")
     print ("2 scooty")
-    choice2 = int(input("choose:"))
+    try:
+        choice2 = int(input("choose:"))
+    except ValueError:
+        print("Please enter a valid number.")
+        exit()
     if (choice2 == 1):
         print ("you like scooters")
     else:
@@ -33,7 +41,11 @@ elif (choice == 2):
     print ("do you like")
     print("1 XUV")
     print("2 Sedan")
-    choice2 = int(input("what is your awnser:"))
+    try:
+        choice2 = int(input("what is your awnser:"))
+    except ValueError:
+        print("Please enter a valid number.")
+        exit()
     if (choice2 == 1):
         print ("you like XUV")
     else:
